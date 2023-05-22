@@ -1,0 +1,381 @@
+/* <!-- ========== Start Global  ========== --> */
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
+
+:root {
+  --dark: #091921;
+  --txt-clr: #ffffff;
+}
+
+body {
+  /* background-image: url(../images/1092758.jpg); */
+  background-color: rgb(25, 40, 41);
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  color: var(--txt-clr);
+  place-items: center;
+  display: grid;
+}
+
+.titlephoto{
+  width: 200px;
+  position: absolute;
+  top: 0px;
+  opacity: 50%;
+  /* transform: translateX(-50xp); */
+}
+.container .title {
+  font-family: "Bebas Neue", cursive;
+  font-size: 3em;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(rgba(255, 217, 0, 0), gold);
+  background-size: 110% 10px;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+  transition: all 0.7s, background-position 0.7s ease-in-out;
+}
+
+.container .title:hover {
+  background-size: 100% 100%;
+  color: #1a107a;
+  background-position: 0% 100%;
+  transition: background-position 0.7s, background-size 0.5s ease-in-out;
+}
+
+.div {
+  margin-top: 80px;
+  background-color: rgba(251, 215, 181, 0.2);
+}
+
+.form-control {
+  background-color: transparent;
+  position: relative;
+  width: 100%;
+  border: 0;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  color: rgb(255, 208, 0);
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: rgb(174, 45, 235);
+}
+
+.form-control label {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  font-family:monospace, Tahoma, Geneva, Verdana, sans-serif;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  min-width: 5px;
+  color: rgb(255, 230, 0);
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: rgb(255, 255, 255);
+  transform: translateY(-30px);
+}
+
+.shadow__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  transition-property: all;
+}
+
+.shadow__btn {
+  background: rgb(0,140,255);
+  box-shadow: 0 0 25px rgb(0,140,255);
+  color:  rgb(0,140,255),;
+}
+
+.shadow__btn:hover {
+  color:  rgb(130, 168, 199),;
+  background:  rgb(0, 27, 49);
+  box-shadow: 0 0 5px rgb(0,140,255),
+              0 0 25px rgb(0,140,255),
+              0 0 50px rgb(0,140,255),
+              /* 0 0 100px rgb(0,140,255); */
+}
+
+.removeError button {
+  width: 150px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  background: #e62222;
+}
+
+.removeError button, button span {
+  transition: 200ms;
+}
+
+.removeError button .text {
+  transform: translateX(15);
+  color: white;
+  font-weight: bold;
+}
+
+.removeError button .icon {
+  position: absolute;
+  border-left: 1px solid #c41b1b;
+  transform: translateX(110px);
+  height: 25px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.removeError button svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.removeError button:hover {
+  background: #ff3636;
+}
+
+.removeError button:hover .text {
+  color: transparent;
+}
+
+.removeError button:hover .icon {
+  width: 140px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.removeError button:focus {
+  outline: none;
+}
+
+.removeError button:active .icon svg {
+  transform: scale(0.8);
+}
+
+.clearAll button {
+  --green: #1BFD9C;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+}
+
+.clearAll button:hover {
+  color: #82ffc9;
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+
+.clearAll button:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform .4s ease-in-out;
+  background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+}
+
+.clearAll button:hover:before {
+  transform: translateX(15em);
+}
+
+.search {
+  position: relative;
+  --size-button: 40px;
+  margin-bottom: 20px;
+}
+
+.search .input {
+  padding-left: var(--size-button);
+  height: var(--size-button);
+  font-size: 15px;
+  border: none;
+  color: rgb(255, 255, 255);
+  outline: none;
+  width: var(--size-button);
+  transition: all ease 0.3s;
+  background-color: #191A1E;
+  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.search .input:focus,
+.search .input:not(:invalid) {
+  width: 250px;
+  cursor: text;
+  box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #8b8b8b;
+}
+
+.search .input:focus + .icon,
+.search .input:not(:invalid) + .icon {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.search .icon {
+  position: absolute;
+  width: var(--size-button);
+  height: var(--size-button);
+  top: 0;
+  left: 0;
+  padding: 8px;
+  pointer-events: none;
+}
+
+.search .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+table{
+
+	width: 75%;
+	box-shadow: -1px 12px 12px -6px rgba(0,0,0,0.5);
+}
+
+table, td, th{
+	padding: 10px;
+	border: 1px solid rgba(211, 211, 211, 0);
+	/* border-collapse: collapse; */
+	text-align: center;
+	cursor: pointer;
+}
+
+td{
+
+  color: #ffffff;
+	font-size: 18px;
+}
+
+th{
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+  border-radius: 10px;
+}
+
+tr:nth-child(odd){
+	background-color: rgba(255, 255, 255, 0);
+  border-radius: 25px;
+	transition: transform 300ms ease-in;
+  border-radius: 50px;
+}
+
+tr:nth-child(odd):hover{
+  /* transform: scale(1.02); */
+	background-color: rgba(0, 0, 0, 0.2);
+	color: white;
+  border-radius: 10px;
+}
+
+tr:nth-child(even){
+	background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  transition: transform 300ms ease-in;
+  border-radius: 10px;
+}
+
+tr:nth-child(even):hover{
+	background-color: rgba(255, 255, 255, 0.2);
+	/* transform: scale(1.02); */
+  border-radius: 10px;
+}
+
+.dropdown-menu{
+  background-color: #191A1E;
+  font-size: 18px;
+  border-style: none;
+  z-index: 999;
+}
+
+.dots{
+  color: rgb(255, 230, 0) ;
+}
+.delete{
+  color:  var(--bs-danger);
+  transition: all, 0.5s;
+  }
+
+.delete:hover{
+background-color: var(--bs-danger);
+color: white;
+transform: scale(1.1);
+}
+
+button{
+  border-style: none;
+  background-color: transparent;
+}
+
+.edit{
+  color:  var(--bs-primary);
+  transition: all, 0.5s;
+
+  }
+
+.edit:hover{
+  background-color:var(--bs-primary);
+  color: white;
+  transform: scale(1.1);
+
+  }
+
+.visit{
+  color:  var(--bs-warning);
+  transition: all, 0.5s;
+
+  }
+
+.visit:hover{
+  background-color:var(--bs-warning);
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
+
+  }
