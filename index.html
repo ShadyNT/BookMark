@@ -1,0 +1,114 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="description" content="DANIELS Portfolio Site " />
+  <meta name="keywords" content="JS-programs, javaScript, javaScript for beginners" />
+  <meta name="author" content="Shady Nabil" />
+  <title>JS-Progs</title>
+  <link rel="shortcut icon" href="images/bookMark_logo.png" type="image/x-icon" />
+
+  <!-- ========== FontAwesome6.2 Css File ========== -->
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <!-- ========== BootStrap5.3 Css File ========== -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <!-- ========== Custome Css File ========== -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- ========== Custome Css File ========== -->
+  <link rel="stylesheet" href="./css/ID_logo.css" />
+  <!-- ========== Font awesome File ========== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#nav-active">
+  <img class="titlephoto" src="images/bookMark_logo.png" alt="">
+
+  <div class="container text-center w-75 py-5">
+    <div class="main_title">
+      <span class="title">Save your websites here</span>
+    </div>
+
+    <div class="div  shadow  rounded-5 shadow p-5">
+      <div class="form-control">
+        <input id="websiteName" type="text" required="" value="">
+        <label>
+          <span style="transition-delay:0 ms">S</span>
+          <span style="transition-delay:50ms">i</span>
+          <span style="transition-delay:100ms">t</span>
+          <span style="transition-delay:150ms">e</span>
+          <span style="transition-delay:150ms"> </span>
+          <span style="transition-delay:200ms">N</span>
+          <span style="transition-delay:250ms">a</span>
+          <span style="transition-delay:300ms">m</span>
+          <span style="transition-delay:350ms">e</span>
+        </label>
+      </div>
+
+      <div class="form-control">
+        <input id="urlPath" type="text" required=" " value="">
+        <label>
+          <span style="transition-delay:0ms">U</span>
+          <span style="transition-delay:50ms">R</span>
+          <span style="transition-delay:100ms">L</span>
+        </label>
+      </div>
+      <div class="removeError">
+        <button id="invaledUrl" onclick="removeError()" class="noselect d-none"><span class="text">Invalid URL</span><span class="icon"><svg
+          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path
+            d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z">
+          </path>
+        </svg></span></button>
+      </div>
+
+      <div class="confirm mt-5">
+        <button id="addBtn" onclick=" addWebsite ()" class="shadow__btn ">Add Website</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="search">
+    <input oninput="searchwebsites (this.value)" placeholder="Find you Website" required="" class="input" name="text"
+      type="text">
+    <div class="icon">
+      <svg viewBox="0 0 512 512" class="ionicon" xmlns="http://www.w3.org/2000/svg">
+        <title>Find website</title>
+        <path stroke-width="32" stroke-miterlimit="10" stroke="currentColor" fill="none"
+          d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"></path>
+        <path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10" stroke-linecap="round"
+          stroke="currentColor" fill="none"></path>
+      </svg>
+    </div>
+  </div>
+  <div id="clearAll" class="clearAll text-end ">
+    <button  onclick="clearAll()">Clear All</button>
+  </div>
+  <table class=" table w-75 shadow my-5 ">
+    <thead>
+      <th width="40px">No</th>
+      <th>Site Name</th>
+      <th>URL</th>
+      <th>Option</th>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+  </table>
+
+  <footer class=" d-flex pb-5 text-dark" >
+    <h6 class=" my-auto">End of assingment 8 by</h6>
+    <div class="loadingspinner text-center my-auto  fw-bolder mx-2 ">
+      <div id="square1">S</div>
+      <div id="square2">H</div>
+      <div id="square3">A</div>
+      <div id="square4">D</div>
+      <div id="square5">Y</div>
+    </div>
+    <h6 class=" my-auto ">to Route Academy</h6>
+  </footer>
+
+  <script src="JS/bootstrap.bundle.min.js"></script>
+  <script src="JS/main.js"></script>
+</body>
+
+</html>
